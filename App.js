@@ -1,24 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View ,KeyboardAvoidingView} from 'react-native';
-import Input from './components/searchForm/Input';
+import { StyleSheet,  View} from 'react-native';
+import ImageGellary from './components/imageGellary/ImageGellary';
+import Images from './components/Images';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"}>
-     <Input style={styles.textForm}/>
-
-      </KeyboardAvoidingView>
+     <ImageGellary/>
+     <Images/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop:100,
+    marginTop:50,
+    marginBottom:20,
     flex:1,
-    justifyContent:'flex-start',
+    justifyContent:"center",
     backgroundColor: '#fff',
+    alignItems:'center'
   },
 });
